@@ -17,26 +17,26 @@ print ("5) RetroPie")
 
 while True:
         if button.is_pressed:
-                #os.system("echo kodi")
-                os.system("kodi")
+                os.system("echo kodi")
+                #os.system("kodi")
                 exit()
 
         if button2.is_pressed:
-                #os.system("echo startx")
-                os.system("startx")
+                os.system("echo startx")
+                #os.system("startx")
                 exit()
                 
         if button3.is_pressed:
-                #os.system("echo poweroff")
-                os.system("sudo poweroff")
+                os.system("echo poweroff")
+                #os.system("sudo poweroff")
                 exit()
                 
         if button4.is_pressed:
-                #os.system("echo Controller Connect")
-                os.system("./home/pi/ConntrollerConnect.sh")
+                os.system("echo Controller Connect")
+                #os.system("./home/pi/ConntrollerConnect.sh")
                 exit()
                 
         if button5.is_pressed:
-                #os.system("echo emulationstation")
-                os.system("emulationstation")
+                os.system("echo emulationstation")
+                #os.system("emulationstation")
                 exit()
