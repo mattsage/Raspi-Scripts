@@ -7,9 +7,7 @@ button3 = Button(25)
 button4 = Button(5)
 button5 = Button(19)
 
-def start() :
 
-	start()
 print ("Please Choose a Button")
 print ("1) Kodi")
 print ("2) Desktop")
