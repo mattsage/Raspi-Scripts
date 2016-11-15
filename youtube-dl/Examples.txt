@@ -1,0 +1,5 @@
+#######Best Video#######
+youtube-dl -o youtubeDLTest.mp4 "https://www.youtube.com/watch?v=Z0SzIkheaFg" - Best video
+
+#######BEST AUDIO#######
+youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 "https://www.youtube.com/watch?v=IuS5huqOND4"
