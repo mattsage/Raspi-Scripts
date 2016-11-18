@@ -3,3 +3,9 @@ youtube-dl -o youtubeDLTest.mp4 "https://www.youtube.com/watch?v=Z0SzIkheaFg" - 
 
 #######BEST AUDIO#######
 youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 "https://www.youtube.com/watch?v=IuS5huqOND4"
+
+#######Entire channel#######
+youtube-dl -citw ytuser:<USERNAME HERE>
+
+#######single playlist#######
+youtube-dl -citw <THE PLAYLIST URL HERE>
