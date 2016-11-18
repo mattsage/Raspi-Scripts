@@ -1,0 +1,52 @@
+How Do I Install get_iplayer on my Pi?
+First update your packages…
+
+sudo apt-get update
+sudo apt-get upgrade
+
+Then add Jon Davies’ repository to your sources.list. Copy and paste the following 5 lines of code into a terminal window on your Raspberry Pi (and press ENTER)…
+
+
+sudo bash -c "cat > /etc/apt/sources.list.d/packages.hedgerows.org.uk.list <<EOF
+deb http://packages.hedgerows.org.uk/raspbian wheezy/
+deb-src http://packages.hedgerows.org.uk/raspbian wheezy/
+EOF
+"
+Then enter each of these three lines one at a time to update your package list again, install the right keyring, then update again…
+
+sudo apt-get update
+sudo apt-get --allow-unauthenticated -y install jonhedgerows-keyring
+sudo apt-get update
+
+Now we’re ready to install. (Notice the installation name is – hyphenated, not _ underscored.)
+
+sudo apt-get install get-iplayer
+
+After installing get_iplayer we need to install FFMPEG. If you don’t want to compile it yourself, grab it from github with…
+
+wget https://github.com/ccrisan/motioneye/wiki/precompiled/ffmpeg_3.1.1-1_armhf.deb
+
+Then install it with…
+sudo dpkg -i ffmpeg_3.1.1-1_armhf.deb
+
+Then configure get_iplayer to use it…
+get_iplayer --add-prefs --ffmpeg="/usr/bin/ffmpeg"
+
+Then you should be good to go. Run it with… (Notice the program name is _ underscored, not – hyphenated.)
+
+get_iplayer --help
+
+This will give you a list of the basic usage options. If you want to see all of the advanced options as well…
+
+get_iplayer --helplong
+
+Basic Command Line Usage
+That’s nice, but how do I get started? Typing…
+
+get_iplayer planet gave this output…
+
+output from get_iplayer planet
+output from get_iplayer planet
+So, supposing I want to download number 2688 Planet Earth II – Mountains…
+
+get_iplayer --get 2688 --modes best (--modes best gives you the best available quality)
