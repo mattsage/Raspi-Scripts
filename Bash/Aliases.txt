@@ -1,0 +1,9 @@
+#nano ~/.bashrc
+
+alias GM='emulationstation'
+alias cls='clear'
+alias P='poweroff'
+
+#Save and Quit
+
+#source ~/.bashrc
