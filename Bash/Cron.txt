@@ -1,0 +1,38 @@
+crontab -e
+
+minute, hour, day of month, month of year, day of week, and the command to be executed.
+
+# m h  dom mon dow   command
+# * * * * *  command to execute
+# ┬ ┬ ┬ ┬ ┬
+# │ │ │ │ │
+# │ │ │ │ │
+# │ │ │ │ └───── day of week (0 - 7) (0 to 6 are Sunday to Saturday, or use names; 7 is Sunday, the same as 0)
+# │ │ │ └────────── month (1 - 12)
+# │ │ └─────────────── day of month (1 - 31)
+# │ └──────────────────── hour (0 - 23)
+# └───────────────────────── min (0 - 59)
+
+#runs backup.sh  every day at midnight
+
+0 0 * * *  /home/pi/backup.sh 
+
+#runs job everyday between the hours of 0800-1800
+
+00 09-18 * * * /home/ramesh/bin/check-db-status
+
+#Run job at 11:30 and 1630 everyday
+
+30 11,16 * * * /home/ramesh/bin/incremental-backup
+
+#0900-1800 Monday-Friday
+
+00 09-18 * * 1-5 /home/ramesh/bin/check-db-status
+
+#Every 10 minutes
+
+0,10,20,30,40,50 * * * * /bin/execute/this/script.sh
+
+But crontab allows you to do this as well:
+
+*/10 * * * * /bin/execute/this/script.sh
