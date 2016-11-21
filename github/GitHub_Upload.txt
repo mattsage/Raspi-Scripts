@@ -1,0 +1,9 @@
+Git clone [URL]
+
+Git status
+
+Git add .
+
+Git commit -m "comment" 
+
+Git push
