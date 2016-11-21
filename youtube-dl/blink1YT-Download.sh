@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd /media/pi/Samsung\ USB1/
+
 echo "Video or Audio (A/V?)"
 read choice
 
