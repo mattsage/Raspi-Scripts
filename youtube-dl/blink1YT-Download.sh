@@ -1,13 +1,8 @@
 #!/bin/bash
 
 apikey=`cat apikey.config`
-echo $apikey
 
-#cd /media/pi/Samsung\ USB1/
-fdisk -l 	#Lists all Devices connected to Computer
-echo "Please select a drive to save to (or type path):"
-read drive
-cd $drive
+cd /media/pi/Samsung\ USB1/
 
 echo "Video or Audio (A/V?)"
 read choice
@@ -17,7 +12,7 @@ if [ $choice = "A" ] #Option A: Audio
 	echo "Please enter URL"
 	read URL
 	youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 "$URL"
-	./home/pi/pushbullet_cmd.py $apikey note udeCmddJpl "Download Completed" "Download Completed"
+	#./home/pi/pyPushBullet/pushbullet_cmd.py $apikey note udeCmddJpl "Download Completed" "Download Completed"
 	sudo /home/pi/blink1/commandline/blink1-tool --green --glimmer=50
 elif [ $choice = "V" ] #Option V: Video
         then
