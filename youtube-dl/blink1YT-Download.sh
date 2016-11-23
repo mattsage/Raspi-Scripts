@@ -3,7 +3,12 @@
 apikey=`cat apikey.config`
 echo $apikey
 
-cd /media/pi/Samsung\ USB1/
+#cd /media/pi/Samsung\ USB1/
+fdisk -l 	#Lists all Devices connected to Computer
+echo "Please select a drive to save to (or type path):"
+read drive
+cd $drive
+
 echo "Video or Audio (A/V?)"
 read choice
 
