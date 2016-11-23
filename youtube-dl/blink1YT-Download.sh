@@ -17,8 +17,8 @@ if [ $choice = "A" ] #Option A: Audio
 	echo "Please enter URL"
 	read URL
 	youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 "$URL"
+	./home/pi/pushbullet_cmd.py $apikey note udeCmddJpl "Download Completed" "Download Completed"
 	sudo /home/pi/blink1/commandline/blink1-tool --green --glimmer=50
-	./home/pi/pushbullet_cmd.py $apikey note udeCmddJpl "Download Completed" "Download Compelted"
 elif [ $choice = "V" ] #Option V: Video
         then
         echo "Please enter URL"
