@@ -1,7 +1,9 @@
 #!/bin/bash
 
-cd /media/pi/Samsung\ USB1/
+apikey=`cat apikey.config`
+echo $apikey
 
+cd /media/pi/Samsung\ USB1/
 echo "Video or Audio (A/V?)"
 read choice
 
@@ -11,6 +13,7 @@ if [ $choice = "A" ] #Option A: Audio
 	read URL
 	youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 "$URL"
 	sudo /home/pi/blink1/commandline/blink1-tool --green --glimmer=50
+	./home/pi/pushbullet_cmd.py $apikey note udeCmddJpl "Download Completed" "Download Compelted"
 elif [ $choice = "V" ] #Option V: Video
         then
         echo "Please enter URL"
