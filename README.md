@@ -1,2 +1,2 @@
-# Raspi-Sensors
+# Raspi-Scripts
 Example Scripts for Raspberry pi
