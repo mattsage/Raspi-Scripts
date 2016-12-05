@@ -3,12 +3,12 @@
 echo "Video or Audio (A/V?)"
 read choice
 
-if [ $choice = "A" ] #Option A: Audio
+if [ $choice = "A" ] || [ $choice = "a" ] #Option A: Audio
 	then
 	echo "Please enter URL"
 	read URL
 	youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 "$URL"
-elif [ $choice = "V" ] #Option V: Video
+elif [ $choice = "V" ] || [ $choice = "v" ] #Option V: Video
         then
         echo "Please enter URL"
         read URL
