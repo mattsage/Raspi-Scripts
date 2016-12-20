@@ -1,10 +1,6 @@
 #
 #count down timer plugin for Displayotron 3000
 #
-# by Brian Corteil aka on Twitter @CannonFodder 
-#
-# free to use
-#
 from dot3k.menu import MenuOption
 import os,time, datetime
 from datetime import timedelta
