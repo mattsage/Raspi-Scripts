@@ -25,3 +25,17 @@ os.system('else')
 		backlight.rgb(255,0,0)
 	os.system('exit')
 os.system('fi')
+
+
+
+
+
+choice = input('Video or Audio (A/V?)')
+choice.lower()
+print (choice)
+if choice is "a":
+  print ('You chose A')
+elif choice is "v":
+  print ('You chose V')
+else:
+  print ('other')a
