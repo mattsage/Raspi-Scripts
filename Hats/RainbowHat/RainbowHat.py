@@ -13,7 +13,7 @@ def display_message(message):
 @rainbowhat.touch.A.press()
 def press_a(channel):
     rainbowhat.rainbow.clear()
-    display_message("Noah")
+    display_message("NOAH")
     print ("Button A touched!")
     rainbowhat.rainbow.set_all(255,0,0)
     rainbowhat.rainbow.show()
