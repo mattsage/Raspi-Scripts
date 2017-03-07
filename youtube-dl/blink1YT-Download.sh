@@ -2,7 +2,7 @@
 
 apikey=`cat apikey.config`
 
-cd /media/pi/Samsung\ USB1/
+cd /media/pi/13ED-F8CF/
 
 echo "Video or Audio (A/V?)"
 read choice
