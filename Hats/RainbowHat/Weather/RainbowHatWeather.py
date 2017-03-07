@@ -14,7 +14,7 @@ Location = raw_input("Please Enter a Location e.g. Tromso,Norway: ")
 print(Location)
 #Location = "Tromso,Norway"
 
-key = open('apikey.config', 'r').read()
+key = open('apikey.config', 'r').read() #Place Weather Underground apikey in a file called apikey.config
 key = key.strip('\n')
 #print "API Key =",key
 
