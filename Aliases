@@ -1,0 +1,9 @@
+#sudo nano .bashrc
+
+alias GM='emulationstation'
+alias cls='clear'
+alias P='poweroff'
+alias update='sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade
+alias setclip='xclip -selection c'
+alias getclip='xclip -selection clipboard -o'
+alias gitpwd='cat github.config | setclip'
