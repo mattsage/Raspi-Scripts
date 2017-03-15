@@ -6,13 +6,13 @@
 
 import subprocess
 import signal
-#import rainbowhat
+#import rainbowhat as rh
 import datetime
 import time
 
 Location = raw_input("Please Enter a Location e.g. Tromso,Norway: ")
 print(Location)
-#Location = "Tromso,Norway"
+
 
 key = open('apikey.config', 'r').read() #Place Weather Underground apikey in a file called apikey.config
 key = key.strip('\n')
@@ -24,7 +24,12 @@ subprocess.check_output(fetch, shell=True)
 
 temp="pywu current temp_c"
 currenttemp = subprocess.check_output(temp, shell=True)
+currenttemp = currenttemp.strip('\n')
+currenttemp="%s C" % (currenttemp)
 print currenttemp
+print "The current temp is: ", currenttemp  
+#rh.display.print_str(currenttemp)
+#rh.display.show()
 
 condition="pywu current condition"
 currentcondition = subprocess.check_output(condition, shell=True)
@@ -32,6 +37,9 @@ print currentcondition
 
 if 'Cloudy' in currentcondition:
 	print "Cloudy"
+	rh.rainbow.clear()
+        rh.rainbow.set_pixel(3, 255, 255, 255)
+        rh.rainbow.show()
 elif 'Clouds' in currentcondition:
 	print "Clouds"
 elif 'Rain' in currentcondition:
