@@ -23,8 +23,9 @@ subprocess.check_output(fetch, shell=True) #Run pywu fetch in Bash Shell
 temp="pywu current temp_c" #Get Temp in celsius
 currenttemp = subprocess.check_output(temp, shell=True)
 currenttemp = currenttemp.strip('\n') #Strip Carriage Return
-currenttemp="%s C" % (currenttemp) #Add a "C" to value
-print "The current temp is: ", currenttemp  
+currenttemp = currenttemp.strip()
+currenttemp="%s C"%(currenttemp) #Add a "C" to value
+print "The current temp is:",currenttemp  
 #rh.display.print_str(currenttemp) #Print to Display
 #rh.display.show()
 
