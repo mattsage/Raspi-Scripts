@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #Copy this file to /usr/bin
+#Create file /home/pi/pushbulletkey.config with pushbullet apiKey
 #chmod 755 /usr/bin/Pushbullet.sh
 #usage: Pushbullet.sh "Send this"
 
