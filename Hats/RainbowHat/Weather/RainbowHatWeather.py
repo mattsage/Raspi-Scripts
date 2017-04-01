@@ -6,7 +6,7 @@
 #Import Libraries
 import subprocess
 import signal
-#import rainbowhat as rh
+import rainbowhat as rh
 import datetime
 import time
 
@@ -26,8 +26,8 @@ currenttemp = currenttemp.strip('\n') #Strip Carriage Return
 currenttemp = currenttemp.strip()
 currenttemp="%s C"%(currenttemp) #Add a "C" to value
 print "The current temp is:",currenttemp  
-#rh.display.print_str(currenttemp) #Print to Display
-#rh.display.show()
+rh.display.print_str(currenttemp) #Print to Display
+rh.display.show()
 
 condition="pywu current condition" #Fetch Current Condition
 currentcondition = subprocess.check_output(condition, shell=True)
@@ -36,78 +36,106 @@ print currentcondition
 #If loop for common conditions and Light up suitable Pixel on strip
 if 'Cloudy' in currentcondition:
 	print "Cloudy"
-	#rh.rainbow.clear()
-	#rh.rainbow.set_pixel(3, 255, 255, 255)
-	#rh.rainbow.show()
+	rh.rainbow.clear()
+	rh.rainbow.set_pixel(0, 255, 255, 255)
+	rh.rainbow.show()
+        time.sleep(10)
+        rh.display.clear()
 elif 'Clouds' in currentcondition:
 	print "Clouds"
-	#rh.rainbow.clear()
-	#rh.rainbow.set_pixel(3, 255, 255, 255)
-	#rh.rainbow.show()
+	rh.rainbow.clear()
+	rh.rainbow.set_pixel(3, 255, 255, 255)
+	rh.rainbow.show()
+        time.sleep(10)
+        rh.display.clear()
 elif 'Rain' in currentcondition:
 	print "Rain"
-	#rh.rainbow.clear()
-	#rh.rainbow.set_pixel(3, 255, 255, 255)
-	#rh.rainbow.show()
+	rh.rainbow.clear()
+	rh.rainbow.set_pixel(3, 255, 255, 255)
+	rh.rainbow.show()
+        time.sleep(10)
+        rh.display.clear()
 elif 'Drizzle' in currentcondition:
 	print "Drizzle"
-	#rh.rainbow.clear()
-	#rh.rainbow.set_pixel(3, 255, 255, 255)
-	#rh.rainbow.show()
+	rh.rainbow.clear()
+	rh.rainbow.set_pixel(3, 255, 255, 255)
+	rh.rainbow.show()
+        time.sleep(10)
+        rh.display.clear()
 elif 'Snow' in currentcondition:
 	print "Snow"
-	#rh.rainbow.clear()
-	#rh.rainbow.set_pixel(3, 255, 255, 255)
-	#rh.rainbow.show()
+	rh.rainbow.clear()
+	rh.rainbow.set_pixel(3, 255, 255, 255)
+	rh.rainbow.show()
+        time.sleep(10)
+        rh.display.clear()
 elif 'Ice' in currentcondition:
 	print "Ice"
-	#rh.rainbow.clear()
-	#rh.rainbow.set_pixel(3, 255, 255, 255)
-	#rh.rainbow.show()
+	rh.rainbow.clear()
+	rh.rainbow.set_pixel(3, 255, 255, 255)
+	rh.rainbow.show()
+        time.sleep(10)
+        rh.display.clear()
 elif 'Hail' in currentcondition:
 	print "Hail"
-	#rh.rainbow.clear()
-	#rh.rainbow.set_pixel(3, 255, 255, 255)
-	#rh.rainbow.show()
+	rh.rainbow.clear()
+	rh.rainbow.set_pixel(3, 255, 255, 255)
+	rh.rainbow.show()
+        time.sleep(10)
+        rh.display.clear()
 elif 'Mist' in currentcondition:
 	print "Mist"
-	#rh.rainbow.clear()
-	#rh.rainbow.set_pixel(3, 255, 255, 255)
-	#rh.rainbow.show()
+	rh.rainbow.clear()
+	rh.rainbow.set_pixel(3, 255, 255, 255)
+	rh.rainbow.show()
+        time.sleep(10)
+        rh.display.clear()
 elif 'Fog' in currentcondition:
 	print "Fog"
-	#rh.rainbow.clear()
-	#rh.rainbow.set_pixel(3, 255, 255, 255)
-	#rh.rainbow.show()
+	rh.rainbow.clear()
+	rh.rainbow.set_pixel(3, 255, 255, 255)
+	rh.rainbow.show()
+        time.sleep(10)
+        rh.display.clear()
 elif 'Haze' in currentcondition:
 	print "Haze"
-	#rh.rainbow.clear()
-	#rh.rainbow.set_pixel(3, 255, 255, 255)
-	#rh.rainbow.show()
+	rh.rainbow.clear()
+	rh.rainbow.set_pixel(3, 255, 255, 255)
+	rh.rainbow.show()
+        time.sleep(10)
+        rh.display.clear()
 elif 'Thunderstorm' in currentcondition:
 	print "Thunderstorm"
-	#rh.rainbow.clear()
-	#rh.rainbow.set_pixel(3, 255, 255, 255)
-	#rh.rainbow.show()
+	rh.rainbow.clear()
+	rh.rainbow.set_pixel(3, 255, 255, 255)
+	rh.rainbow.show()
+        time.sleep(10)
+        rh.display.clear()
 elif 'Freezing' in currentcondition:
 	print "Freezing"
-	#rh.rainbow.clear()
-	#rh.rainbow.set_pixel(3, 255, 255, 255)
-	#rh.rainbow.show()
+	rh.rainbow.clear()
+	rh.rainbow.set_pixel(3, 255, 255, 255)
+	rh.rainbow.show()
+        time.sleep(10)
+        rh.display.clear()
 elif 'Overcast' in currentcondition:
 	print "Overcast"
-	#rh.rainbow.clear()
-	#rh.rainbow.set_pixel(3, 255, 255, 255)
-	#rh.rainbow.show()
+	rh.rainbow.clear()
+	rh.rainbow.set_pixel(3, 255, 255, 255)
+	rh.rainbow.show()
+        time.sleep(10)
+        rh.display.clear()
 elif 'Clear' in currentcondition:
 	print "Clear"
-	#rh.rainbow.clear()
-	#rh.rainbow.set_pixel(3, 255, 255, 255)
-	#rh.rainbow.show()
+	rh.rainbow.clear()
+	rh.rainbow.set_pixel(0, 0, 0, 255)
+	rh.rainbow.show()
+	time.sleep(10)
+	rh.display.clear()
 elif 'Unknown' in currentcondition:
 	print "Unknown"
-	#rh.rainbow.clear()
-	#rh.rainbow.set_all(255, 0, 0)
-	#rh.rainbow.show()	
+	rh.rainbow.clear()
+	rh.rainbow.set_all(255, 0, 0)
+	rh.rainbow.show()	
 else:
 	print "Weather Not Found"
