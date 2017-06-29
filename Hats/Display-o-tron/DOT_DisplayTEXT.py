@@ -11,4 +11,4 @@ Press CTRL+C to exit.
 # Clear the LCD and display Hello World
 backlight.rgb(138,43,226)
 lcd.clear()
-lcd.write("Bow Down")
+lcd.write("Hail to the King")
