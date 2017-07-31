@@ -1,20 +1,16 @@
-import datetime
+from datetime import datetime, time
 
-dt  = datetime.datetime
-now = dt.now()
+def dateDiffInSeconds(date1, date2):
+  timedelta = date2 - date1
+  return timedelta.days * 24 * 3600 + timedelta.seconds
 
-# This gives timedelta in days & seconds
-dt(year=2016,month=12,day=17) - dt(year=now.year, month=now.month, day=now.day, minute=now.minute)
+def daysHoursMinutesSecondsFromSeconds(seconds):
+	minutes, seconds = divmod(seconds, 60)
+	hours, minutes = divmod(minutes, 60)
+	days, hours = divmod(hours, 24)
+	return (days, hours, minutes, seconds)
 
+leaving_date = datetime.strptime('2012-01-01 01:00:00', '%Y-%m-%d %H:%M:%S')
+now = datetime.now()
 
-
-import datetime
-
-dt=datetime.datetime.now()
-mon=12-dt.month
-day=17-dt.day
-hr=13-dt.hour
-mn=60-dt.minute
-sec=60-dt.second
-
-print mon,day,hr,mn,sec
+print "%d days, %d hours, %d minutes, %d seconds" % daysHoursMinutesSecondsFromSeconds(dateDiffInSeconds(now, leaving_date))
