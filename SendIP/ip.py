@@ -16,7 +16,7 @@ ipaddress = ([l for l in ([ip for ip in socket.gethostbyname_ex(socket.gethostna
 
 #print ipaddress
 
-ippush = "Wendigo IP: %s" % ipaddress
+ippush = "Pi IP: %s" % ipaddress
 #print ippush
 
 push = pb.push_note(ippush,ippush)
